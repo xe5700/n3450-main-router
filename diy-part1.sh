@@ -16,6 +16,15 @@
 # Add a feed source
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 
-sed -i "$a src-git helloworld https://github.com/fw876/helloworld" feeds.conf.default
-sed -i "$a src-git small https://github.com/kenzok8/small" feeds.conf.default
-sed -i "$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git" feeds.conf.default
+#sed -i "$a src-git helloworld https://github.com/fw876/helloworld" feeds.conf.default
+#sed -i "$a src-git small https://github.com/kenzok8/small" feeds.conf.default
+#sed -i "$a src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git" feeds.conf.default
+
+cat >> feeds.conf.default << EOF
+src-git helloworld https://github.com/fw876/helloworld.git
+src-git infinityfreedom https://github.com/xiaoqingfengATGH/luci-theme-infinityfreedom.git
+src-git openclash https://github.com/vernesong/OpenClash.git
+src-git xe5700 https://github.com/xe5700/openwrt-extrapackage.git
+src-git jerrykuku https://github.com/jerrykuku/openwrt-package.git
+src-git kenzok8 https://github.com/kenzok8/openwrt-packages.git
+EOF
